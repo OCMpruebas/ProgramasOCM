@@ -12,6 +12,7 @@ import { IndiceComponent } from './programas/indice/indice.component';
 import { AboutComponent } from './programas/about/about.component';
 import { ProgramaComponent } from './programas/programa/programa.component';
 import { CardBasicoComponent } from './shared/cards/card-basico/card-basico.component';
+import { CardInfoProgramaComponent } from './shared/cards/card-info-programa/card-info-programa.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CardBasicoComponent } from './shared/cards/card-basico/card-basico.comp
     IndiceComponent,
     AboutComponent,
     ProgramaComponent,
-    CardBasicoComponent
+    CardBasicoComponent,
+    CardInfoProgramaComponent
   ],
   imports: [
     BrowserModule,
