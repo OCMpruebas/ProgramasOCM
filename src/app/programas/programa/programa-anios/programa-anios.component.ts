@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./programa-anios.component.css']
 })
 
+
 export class ProgramaAniosComponent implements OnInit {
+DesPro = 'Recogida de residuos';
 
   constructor() {
+
+    function clearBox(elementID) {
+    document.getElementById(elementID).innerHTML = '';
+}
        }
 
   ngOnInit() {}

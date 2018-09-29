@@ -18,16 +18,14 @@
 <body class="top-fixed">
   <app-root></app-root>
 
-
-
   <script type='text/javascript'>
     function initVizPersonal(DesPro) {
-      var containerDiv = document.getElementById("vizContainer"),
+      var containerDiv = document.getElementById("vizContainerPersonal"),
         url = "http://public.tableau.com/views/Anexo1_Presupuesto2_018/PersonalparaWEB",
         options = {
           "DesPro": DesPro,
-          width: 960,
-          height: 1000,
+          // width: 960,
+          // height: 1000,
           // height: (containerDiv.offsetWidth) *1 ,
           hideTabs: true,
           showShareOptions: true
@@ -37,7 +35,7 @@
     }
 
     function initVizGastos(DesPro) {
-      var containerDiv = document.getElementById("vizContainer2"),
+        var containerDivGastos = document.getElementById("vizContainerGastos"),
         url = "http://public.tableau.com/views/2018_03_21PresupuestoGastos2018DEFINITIVOMAM/Porprogramaycapitulo",
         options = {
           "Des Fun": DesPro,
@@ -46,7 +44,7 @@
           hideTabs: true
         };
 
-      vizGastos = new tableau.Viz(containerDiv, url, options);
+      vizGastos = new tableau.Viz(containerDivGastos, url, options);
     }
   </script>
 

@@ -7,11 +7,19 @@
         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
       </div>
 
-      
+  <a class="btn btn-primary" onclick="initVizPersonal( 'Recogida de residuos' )" role="button">Personal</a>
+  ___
+ 
+   <script>
+      clearBox("vizContainerPersonal");
+    </script>
 
-  <a class="btn btn-primary" onclick="initVizPersonal('Recogida de residuos')" role="button">Personal</a>
   <a class="btn btn-primary" onclick="initVizGastos('Recogida de residuos')" role="button">Gastos</a>
 
-  <div id="vizContainer"></div>
+<p>{{ DesPro }}</p>
+
+  <!-- <div class="row" class="col-md-6" id="vizContainerPersonal"></div> -->
+  <div id="vizContainerPersonal"></div>
+  <div id="vizContainerGastos"></div>
 
 </body>
