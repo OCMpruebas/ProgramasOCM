@@ -4,12 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { IndiceComponent } from './programas/indice/indice.component';
 import { AboutComponent } from './programas/about/about.component';
 import { ProgramaComponent } from './programas/programa/programa.component';
-
+import { ProgramaAniosComponent } from './programas/programa/programa-anios/programa-anios.component';
 
 const app_routes: Routes = [
     { path: 'home', component: IndiceComponent },
     { path: 'about', component: AboutComponent },
     { path: 'programa', component: ProgramaComponent },
+    { path: 'programaAnios', component: ProgramaAniosComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

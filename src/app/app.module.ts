@@ -13,6 +13,7 @@ import { AboutComponent } from './programas/about/about.component';
 import { ProgramaComponent } from './programas/programa/programa.component';
 import { CardBasicoComponent } from './shared/cards/card-basico/card-basico.component';
 import { CardInfoProgramaComponent } from './shared/cards/card-info-programa/card-info-programa.component';
+import { ProgramaAniosComponent } from './programas/programa/programa-anios/programa-anios.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CardInfoProgramaComponent } from './shared/cards/card-info-programa/car
     AboutComponent,
     ProgramaComponent,
     CardBasicoComponent,
-    CardInfoProgramaComponent
+    CardInfoProgramaComponent,
+    ProgramaAniosComponent
   ],
   imports: [
     BrowserModule,
