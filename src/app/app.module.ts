@@ -11,6 +11,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { IndiceComponent } from './programas/indice/indice.component';
 import { AboutComponent } from './programas/about/about.component';
 import { ProgramaComponent } from './programas/programa/programa.component';
+import { CardBasicoComponent } from './shared/cards/card-basico/card-basico.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProgramaComponent } from './programas/programa/programa.component';
     FooterComponent,
     IndiceComponent,
     AboutComponent,
-    ProgramaComponent
+    ProgramaComponent,
+    CardBasicoComponent
   ],
   imports: [
     BrowserModule,
