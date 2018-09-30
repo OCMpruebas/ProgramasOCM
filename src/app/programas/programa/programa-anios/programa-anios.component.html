@@ -1,25 +1,61 @@
+<head>
+  <!--  <script>src = "https://public.tableau.com/javascripts/api/tableau-2.min.js"</script>
+
+  <script type='text/javascript'>
+    function initVizPersonal(DesPro) {
+      var containerDiv = document.getElementById('vizContainerPersonal'),
+        url = "http://public.tableau.com/views/Anexo1_Presupuesto2_018/PersonalparaWEB",
+        options = {
+          'DesPro': DesPro,
+          // width: 960,
+          // height: 1000,
+          // height: (containerDiv.offsetWidth) *1 ,
+          hideTabs: true,
+          showShareOptions: true
+        };
+
+      vizPersonal = new tableau.Viz(containerDiv, url, options);
+    }
+  </script> -->
+
+</head>
+
 <body>
 
-    <div class="input-group input-group-sm mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Selecciona un programa:</span>
-        </div>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-      </div>
+  <div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-sm">Selecciona un programa:</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+  </div>
 
-  <a class="btn btn-primary" onclick="initVizPersonal( 'Recogida de residuos' )" role="button">Personal</a>
-  ___
- 
-   <script>
-      clearBox("vizContainerPersonal");
-    </script>
+  <!-- <button onclick="copyToClipboard('#p1')">Copy TEXT 1</button> -->
 
-  <a class="btn btn-primary" onclick="initVizGastos('Recogida de residuos')" role="button">Gastos</a>
+  <div>
+    <button type="button" class="btn btn-primary btn-lg" onclick="initVizPersonal('Recogida de residuos')">Personal</button>
+    <button type="button" class="btn btn-primary btn-lg" onclick="initVizGastos('Recogida de residuos')">Gastos</button>
+    <p>{{ DesPro }}</p>
+  </div>
 
-<p>{{ DesPro }}</p>
+  <script>
+    clearBox("vizContainerPersonal");
+  </script>
+
+  <table class=" aligncenter" style="width: 800px; border:double;">
+    <tbody>
+      <tr>
+        <td style="width: 400px; border:double;">
+          <div id="vizContainerPersonal"></div>
+        </td>
+        <td style="width: 400px; border: double;">
+          <div id="vizContainerGastos"></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
   <!-- <div class="row" class="col-md-6" id="vizContainerPersonal"></div> -->
-  <div id="vizContainerPersonal"></div>
-  <div id="vizContainerGastos"></div>
+  <!--  <div id="vizContainerPersonal"></div>
+  <div id="vizContainerGastos"></div> -->
 
 </body>

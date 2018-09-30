@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Portafolio</title>
+  <title>OCM Jerez</title>
   <!-- <base href="/"> -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="assets/css/aurora-pack.min.css">
   <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
   <link rel="stylesheet" href="assets/css/urku.css">
-
 </head>
 
 <body class="top-fixed">
@@ -24,8 +23,8 @@
         url = "http://public.tableau.com/views/Anexo1_Presupuesto2_018/PersonalparaWEB",
         options = {
           "DesPro": DesPro,
-          // width: 960,
-          // height: 1000,
+          // width: 600,
+          // height: 640,
           // height: (containerDiv.offsetWidth) *1 ,
           hideTabs: true,
           showShareOptions: true
@@ -35,12 +34,13 @@
     }
 
     function initVizGastos(DesPro) {
-        var containerDivGastos = document.getElementById("vizContainerGastos"),
+      var containerDivGastos = document.getElementById("vizContainerGastos"),
         url = "http://public.tableau.com/views/2018_03_21PresupuestoGastos2018DEFINITIVOMAM/Porprogramaycapitulo",
         options = {
           "Des Fun": DesPro,
-          width: 960,
-          height: 1000,
+          width: 900,
+          height: 640,
+          // height: (containerDiv.offsetWidth) *1 ,
           hideTabs: true
         };
 
@@ -51,7 +51,6 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 
   <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
   <script src="assets/js/svg4everybody.min.js"></script>
