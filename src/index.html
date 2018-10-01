@@ -16,51 +16,72 @@
   <link href="https://harvesthq.github.io/chosen/chosen.css" rel="stylesheet" />
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
-  
 </head>
 
 <body class="top-fixed">
   <app-root></app-root>
 
   <script type='text/javascript'>
-    function initVizPersonal(DesPro) {
-      var containerDiv = document.getElementById("vizContainerPersonal"),
-        url = "http://public.tableau.com/views/Anexo1_Presupuesto2_018/PersonalparaWEB",
-        options = {
-          "DesPro": DesPro,
-          width: 550,
-          height: 640,
-          // height: (containerDiv.offsetWidth) *1 ,
-          hideTabs: true,
-          showShareOptions: true
-        };
-
-      vizPersonal = new tableau.Viz(containerDiv, url, options);
-    }
-
-    function initVizGastos(DesPro) {
-      var containerDivGastos = document.getElementById("vizContainerGastos"),
-        // url = "http://public.tableau.com/views/2018_03_21PresupuestoGastos2018DEFINITIVOMAM/Porprogramaycapitulo",
-        url = "https://public.tableau.com/views/2018_03_21PresupuestoGastos2018DEFINITIVOMAM_0/Porprogramaycapitulo"
+    cargado = 0;
+    /* function initVizPersonal(DesPro) {
+     
+       var containerDiv = document.getElementById("vizContainerPersonal"),
+         url = "http://public.tableau.com/views/Anexo1_Presupuesto2_018/PersonalparaWEB",
+         options = {
+           "DesPro": DesPro,
+           width: 550,
+           height: 640,
+           // height: (containerDiv.offsetWidth) *1 ,
+           hideTabs: true,
+           showShareOptions: true
+         };
         
-        options = {
-          "Des Fun": DesPro,
-          width: 800,
-          height: 640,
-          // height: (containerDiv.offsetWidth) *1 ,
-          hideTabs: true
-        };
+       viz= new tableau.Viz(containerDiv, url, options);
+       
+     }*/
 
-      vizGastos = new tableau.Viz(containerDivGastos, url, options);
+    function initViz(DesPro, valor = 0) {
+      if (cargado == 1) {
+        viz.dispose();
+      }
+      //  var containerDivGastos = document.getElementById("vizContainerGastos"),
+      if (valor == 1) {
+        var containerDiv = document.getElementById("vizContainerPersonal"),
+          urlPersonal = "http://public.tableau.com/views/Anexo1_Presupuesto2_018/PersonalparaWEB",
+          options = {
+            "DesPro": DesPro,
+            width: 550,
+            height: 640,
+            // height: (containerDiv.offsetWidth) *1 ,
+            hideTabs: true,
+            showShareOptions: true
+          };
+        viz = new tableau.Viz(containerDiv, urlPersonal, options);
+        cargado = 1;
+      } else if (valor == 2) {
+        var containerDivGastos = document.getElementById("vizContainerPersonal"),
+          // url = "http://public.tableau.com/views/2018_03_21PresupuestoGastos2018DEFINITIVOMAM/Porprogramaycapitulo",
+          urlGastos = "https://public.tableau.com/views/2018_03_21PresupuestoGastos2018DEFINITIVOMAM_0/Porprogramaycapitulo",
+
+          options = {
+            "Des Fun": DesPro,
+            width: 800,
+            height: 640,
+            // height: (containerDiv.offsetWidth) *1 ,
+            hideTabs: true
+          };
+        viz = new tableau.Viz(containerDivGastos, urlGastos, options);
+        cargado = 1;
+      }
     }
   </script>
 
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-   <!-- Librerias de pluggins -->
-   <!-- <script src="assets\js\chosen\chosen.jquery.min.js"></script> -->
-   <!-- <script src="https://harvesthq.github.io/chosen/chosen.jquery.js"></script> -->
+  <!-- Librerias de pluggins -->
+  <!-- <script src="assets\js\chosen\chosen.jquery.min.js"></script> -->
+  <!-- <script src="https://harvesthq.github.io/chosen/chosen.jquery.js"></script> -->
 
   <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
   <script src="assets/js/svg4everybody.min.js"></script>

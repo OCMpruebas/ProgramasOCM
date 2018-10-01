@@ -32,8 +32,8 @@
   <!-- <button onclick="copyToClipboard('#p1')">Copy TEXT 1</button> -->
 
   <div>
-    <button type="button" class="btn btn-primary btn-lg" onclick="initVizPersonal('Recogida de residuos')">Personal</button>
-    <button type="button" class="btn btn-primary btn-lg" onclick="initVizGastos('Recogida de residuos')">Gastos</button>
+    <button type="button" class="btn btn-primary btn-lg" onclick="initViz('Recogida de residuos',1)">Personal</button>
+    <button type="button" class="btn btn-primary btn-lg" onclick="initViz('Recogida de residuos',2)">Gastos</button>
     <p>{{ DesPro }}</p>
   </div>
 
@@ -47,9 +47,9 @@
         <td style="width: 300px; border:double;">
           <div id="vizContainerPersonal"></div>
         </td>
-        <td style="width: 400px; border: double;">
+        <!-- <td style="width: 400px; border: double;">
           <div id="vizContainerGastos"></div>
-        </td>
+        </td> -->
       </tr>
     </tbody>
   </table>

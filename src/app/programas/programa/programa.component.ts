@@ -4,7 +4,7 @@ declare var $: any;
 jQuery(document).ready(function() {
   console.log('Pagina cargada');
   $('h1').text('Hola desde jquery');
-  jQuery.getScript('//kkharvesthq.github.io/chosen/chosen.jquery.js')
+  jQuery.getScript('//harvesthq.github.io/chosen/chosen.jquery.js')
     .done(function(script, textStatus) {
       $('.chosen-select').chosen({no_results_text: 'Oops, no se ha encontrado nada!'});
     })
