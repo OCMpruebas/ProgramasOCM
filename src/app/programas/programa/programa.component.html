@@ -1,17 +1,41 @@
 <!-- <section class="ae-container-fluid ae-container-fluid--full"> -->
-    <section class="">
- <!--  <header class="rk-portfolio-cover  item-inside-1">
+    <head>
+        
+      <!--   <script>
+            $(document).ready(function(){
+                $(".chosen-select").chosen();
+           });
+        </script>
+        -->
+    </head> 
+
+
+ 
+  <!--  <header class="rk-portfolio-cover  item-inside-1">
     
   </header>
    -->
-<div class="item-inside__meta">
-      <h1 class="ae-u-bolder rk-portfolio-title ">El usuario busca un programa.</h1>
-      <p class="ae-theta rk-portfolio-category ">Hay que determinar la mejor forma de hacerlo</p>
-    </div>
+  <div class="item-inside__meta">
+    <h1 class="ae-u-bolder rk-portfolio-title ">El usuario busca un programa.</h1>
+    <p class="ae-theta rk-portfolio-category ">Selecciona el programa del que quieres obtener infomación:</p>
+  </div>
 
+  <div>
+  <select class="chosen-select custom-select" name="">
+    <option value="1">Costa Rica</option>
+    <option value="2">Honduras</option>
+    <option value="3">España</option>
+    <option value="4">México</option>
+  </select>
+</div>
+<br>
+<br>
+
+
+ <section class="">
   <app-card-info-programa></app-card-info-programa>
 
- <!--  <div class="ae-grid ae-grid--collapse rk-portfolio-info ">
+  <!--  <div class="ae-grid ae-grid--collapse rk-portfolio-info ">
       <div class="ae-grid__item item-lg-8 item-sm--center au-xs-ta-center au-lg-ta-left">
         <h2 class="rk-portfolio-inner-title ">Essential Stationery Branding Mockup</h2>
       </div>
@@ -22,6 +46,5 @@
       </div>
     </div> -->
 
-
- 
 </section>
+
