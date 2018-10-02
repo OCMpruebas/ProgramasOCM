@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 declare var $: any;
 
-jQuery(document).ready(function() {
+$(document).ready(function() {
   console.log('Pagina cargada');
   $('h1').text('Hola desde jquery');
-  jQuery.getScript('//harvesthq.github.io/chosen/chosen.jquery.js')
+  $.getScript('//harvesthq.github.io/chosen/chosen.jquery.js')
     .done(function(script, textStatus) {
       $('.chosen-select').chosen({no_results_text: 'Oops, no se ha encontrado nada!'});
     })
@@ -26,6 +26,18 @@ jQuery(document).ready(function() {
   });
 
 }); */
+
+$(function () {
+    let countryOptions;
+   $.getJSON('/assets/data/countries.json', function (result) {
+   $.each(result, function (i, country) {
+  // <option value='countrycode'>contryname</option>
+  // countryOptions += '<option value =' + country.code + '>' + country.name + '</option>';
+  countryOptions += '<option value =' + '>' + country.name + '</option>';
+   $('#country').html(countryOptions);
+    });
+    });
+    });
 
 
 @Component({
