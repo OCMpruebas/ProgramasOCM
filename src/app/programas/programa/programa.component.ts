@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var $: any;
+/* declare var $: any;
 
 $(document).ready(function() {
   console.log('Pagina cargada');
@@ -23,7 +23,7 @@ $(document).ready(function() {
      $('#country').html(countryOptions);
       });
       });
-      });
+      }); */
 
 @Component({
   selector: 'app-programa',
