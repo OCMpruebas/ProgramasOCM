@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+
 
 // Rutas
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +32,9 @@ import { ProgramaAniosComponent } from './programas/programa/programa-anios/prog
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgSelectModule,
+    FormsModule
 
   ],
   providers: [],
