@@ -9,98 +9,35 @@
     <p class="ae-theta rk-portfolio-category ">Selecciona el programa del que quieres obtener infomación:</p>
   </div>
 
- 
-  <div>
-  <select class="chosen-select custom-select" id="country" #chosen>
-   </select>
-   Opción seleccionada: {{country}}
-</div>
+<select [(ngModel)]="opcionSeleccionada" (change)="capturar()">
+  <option value="0">Selecciona una opción</option>
+  <option *ngFor="let dato of datos">
+    {{dato}}
+  </option>
+</select>
+
+<!-- <p [hidden]="opcionSeleccionada == '0'">Haz seleccionado la opción # {{ verSeleccion }}</p> -->
 <br>
 <br>
 
-<!-- <div class="form-group row">
-  <label class="col-2 col-form-label">Pais</label>
-  <div class="col-md-8">
-    <select [(ngModel)]="usuario.pais"
-            class="form-control"
-            name="pais">
-       <option value="">Seleccione un pais</option>
-       <option *ngFor="let pais of paises"
-            [value]="pais.codigo"> {{ pais.nombre }} </option>
-    </select>
-  </div>
- 
-</div>  -->
-
- <!-- <label>Custom templates</label> -->
-        <ng-select [items]="cities3"
-                   bindLabel="name"
-                   bindValue="name"
-                   placeholder="Select city"
-                   [(ngModel)]="selectedCityName">
-            <!-- <ng-template ng-header-tmp>
-              Custom header
-            </ng-template>-->
-            <ng-template ng-label-tmp let-item="item">
-                <!-- <img height="15" width="15" [src]="item.avatar"/> -->
-                <b>{{item.name}}</b> 
-            </ng-template>
-            <ng-template ng-option-tmp let-item="item" let-index="index">
-                <img height="15" width="15" [src]="item.avatar"/>
-                <b>{{item.name}}</b>
-            </ng-template>
-            <!-- <ng-template ng-footer-tmp>
-              Custom footer
-            </ng-template>  -->
-        </ng-select>
-        <p>
-            Opción seleccionada: {{selectedCityName}}
-        </p>
-        <hr /> 
-
-<!-- 
-<form #f="ngForm">
-  <select name="state" ngModel>
-    <option value="" disabled>Choose a state</option>
-    <option *ngFor="let state of states" [ngValue]="state">
-      {{ state.name }}
-    </option>
-  </select>
-</form>
-
-<p>Form value: {{ f.value | json }}</p>
-<p>Form value: {{ f.value}} </p> -->
-
-
-
-  <!-- <div class="input-group input-group-sm mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-sm">Selecciona un programa:</span>
-    </div>
-    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-  </div> -->
-
-  <!-- <button onclick="copyToClipboard('#p1')">Copy TEXT 1</button> -->
-
-  <div>
-    <button type="button" class="btn btn-primary btn-lg" onclick="initViz('Recogida de residuos',1)">Personal</button>
+<!-- <div>
+     <button type="button" class="btn btn-primary btn-lg" onclick="initViz('Administración general de la seguridad y protección civil',1)">Personal</button>
     <button type="button" class="btn btn-primary btn-lg" onclick="initViz('Recogida de residuos',2)">Gastos</button>
     <p>{{ DesPro }}</p>
-  </div>
+  </div> -->
 
-  <script>
-    clearBox("vizContainerPersonal");
-  </script>
-
+  
   <table class=" aligncenter" style="width: 800px; border:double;">
     <tbody>
       <tr>
         <td style="width: 300px; border:double;">
-          <div id="vizContainerPersonal"></div>
+            <div id="vizContainerPersonal"></div>
         </td>
-        <!-- <td style="width: 400px; border: double;">
+      </tr>
+    <tr>
+        <td style="width: 400px; border: double;">
           <div id="vizContainerGastos"></div>
-        </td> -->
+        </td>
       </tr>
     </tbody>
   </table>
