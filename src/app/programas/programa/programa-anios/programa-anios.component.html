@@ -3,43 +3,40 @@
 
 <body>
   <div class="item-inside__meta">
+    <br>
+    <br>
     <p class="ae-theta rk-portfolio-category ">Selecciona el programa del que quieres obtener infomación:</p>
   </div>
 
-  <select [(ngModel)]="opcionSeleccionada" (change)="capturar()">
-    <option value="0">Selecciona una opción</option>
-    <option *ngFor="let dato of datos">
-      {{dato}}
-    </option>
-  </select>
-  <br>
-  <br>
+  <div class="container-fluid">
+    <select [(ngModel)]="opcionSeleccionada" (change)="capturar()">
+      <option value="0">Pulsa aqui para seleccionar un programa.</option>
+      <option *ngFor="let dato of datos">
+        {{dato}}
+      </option>
+    </select>
+    <br>
+    <br>
 
-  <!-- <div>
-     <button type="button" class="btn btn-primary btn-lg" onclick="initViz('Administración general de la seguridad y protección civil',1)">Personal</button>
-    <button type="button" class="btn btn-primary btn-lg" onclick="initViz('Recogida de residuos',2)">Gastos</button>
-    <p>{{ DesPro }}</p>
-  </div> -->
-
-  <table class=" aligncenter" style="width: 800px; border:double;">
-    <tbody>
-      <tr>
-        <td style="width: 300px; border:double;">
-          <div id="vizContainerPersonal"></div>
-        </td>
-      </tr>
-      <tr>
-        <td style="width: 400px; border: double;">
-          <div id="vizContainerGastos1"></div>
-        </td>
-      </tr>
-      <tr>
-        <td style="width: 400px; border: double;">
-          <div id="vizContainerGastos">
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
+    <table class=" aligncenter" style="width: 800px; border:double;">
+      <tbody>
+        <tr>
+          <td style="width: 300px; border:double;">
+            <div id="vizContainerPersonal"></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 400px; border: double;">
+            <div id="vizContainerGastos1"></div>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 400px; border: double;">
+            <div id="vizContainerGastos">
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </body>

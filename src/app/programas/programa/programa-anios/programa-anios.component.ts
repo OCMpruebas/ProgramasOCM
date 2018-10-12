@@ -172,7 +172,7 @@ export class ProgramaAniosComponent implements OnInit {
   capturar() {
     this.verSeleccion = this.opcionSeleccionada;
     this.vez += 1;
-  console.log('Vez =' + this.vez);
+
     initVizPersonal(this.verSeleccion, this.vez);
     initVizPresupuesto(this.verSeleccion, this.vez);
     initVizEjecucion(this.verSeleccion, this.vez);

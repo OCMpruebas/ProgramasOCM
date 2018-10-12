@@ -2,26 +2,30 @@
 </head>
 
 <body>
-  <div class="item-inside__meta">
-    <p class="ae-theta rk-portfolio-category ">Selecciona el económico del que quieres obtener infomación:</p>
+  <div class="container-fluid">
+    <div class="item-inside__meta">
+      <br>
+      <br>
+      <p class="ae-theta rk-portfolio-category ">Selecciona el económico del que quieres obtener infomación:</p>
+    </div>
+
+    <select [(ngModel)]="opcionSeleccionada" (change)="capturar()">
+      <option value="0">Pulsa aqui para seleccionar un económico.</option>
+      <option *ngFor="let dato of datos">
+        {{dato}}
+      </option>
+    </select>
+    <br>
+    <br>
+
+    <table class=" aligncenter" style="width: 800px; border:double;">
+      <tbody>
+        <tr>
+          <td style="width: 300px; border:double;">
+            <div id="vizContainerPersonal"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-
-  <select [(ngModel)]="opcionSeleccionada" (change)="capturar()">
-    <option value="0">Selecciona una opción</option>
-    <option *ngFor="let dato of datos">
-      {{dato}}
-    </option>
-  </select>
-  <br>
-  <br>
-
-  <table class=" aligncenter" style="width: 800px; border:double;">
-    <tbody>
-      <tr>
-        <td style="width: 300px; border:double;">
-           <div id="vizContainerPersonal"></div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  </body>
+</body>
