@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 // href='https://github.com/ng-select/ng-select'>Open in Github</a></small></h1>
 // npm install --save @ng-select/ng-select
@@ -13,89 +13,18 @@ declare var initVizPersonal;
 declare var initVizPresupuesto;
 declare var initVizEjecucion;
 
-
-
-
-/* $(document).ready(function() {
-  console.log('Pagina cargada');
-  $('h1').text('Hola desde jquery');
-  $.getScript('//harvesthq.github.io/chosen/chosen.jquery.js')
-    .done(function(script, textStatus) {
-      $('.chosen-select').chosen({no_results_text: 'Oops, no se ha encontrado nada!'});
-    })
-    .fail(function(jqxhr, settings, exception) {
-      alert('Error en programa.component.ts');
-    });
-});
-
-    $(function () {
-      let countryOptions;
-     $.getJSON('/assets/data/programas.json', function (result) {
-     $.each(result, function (i, programa) {
-    // <option value='countrycode'>contryname</option>
-    // countryOptions += '<option value =' + country.code + '>' + country.name + '</option>';
-    countryOptions += '<option value =' + '>' + programa.DesPro + '</option>';
-     $('#country').html(countryOptions);
-      });
-      });
-      }); */
-
 @Component({
   selector: 'app-programa-anios',
   templateUrl: './programa-anios.component.html',
   styleUrls: ['./programa-anios.component.css']
 })
 export class ProgramaAniosComponent implements OnInit {
-  DesPro = 'Recogida de residuos';
   datos;
-
-opcionSeleccionada: string = '0';
-verSeleccion: string = '';
-vez:number = 0;
-
-  /*
-usuario: Object = {
-    nombre: 'Miguel',
-    apellido: 'Martinez',
-    correo: 'corre@gmail.com',
-    pais: 'ESP',
-    sexo: 'Hombre',
-    acepta: true
-  };
-
-  paises = [{
-    codigo: 'CRI',
-    nombre: 'Costa Rica'
-  },
-  {
-    codigo: 'ESP',
-    nombre: 'España'
-  }];
-
-  sexos: string[] = ['Hombre', ' Mujer', 'Otro'];
-
-  states = [
-    {name: 'Arizona', abbrev: 'AZ'},
-    {name: 'California', abbrev: 'CA'},
-    {name: 'Colorado', abbrev: 'CO'},
-    {name: 'New York', abbrev: 'NY'},
-    {name: 'Pennsylvania', abbrev: 'PA'},
-  ];
-
-  cities3 = [
-    {id: 1, name: 'Vilnius', avatar: '//www.gravatar.com/avatar/b0d8c6e5ea589e6fc3d3e08afb1873bb?d=retro&r=g&s=30 2x'},
-    {id: 2, name: 'Kaunas', avatar: '//www.gravatar.com/avatar/ddac2aa63ce82315b513be9dc93336e5?d=retro&r=g&s=15'},
-    {id: 3, name: 'Pavilnys', avatar: '//www.gravatar.com/avatar/6acb7abf486516ab7fb0a6efa372042b?d=retro&r=g&s=15'}
-];
- */
-
+  opcionSeleccionada = '0';
+  verSeleccion = '';
+  vez = 0;
 
   constructor() {
-    // function clearBox(elementID) {
-    //   document.getElementById(elementID).innerHTML = '';
-    // NgForm
-
-    // this.datos = [1,2,3,4,5,6,7,8,9,10];
     this.datos = [
       'Actividades y promoción turística',
       'Actividades y promoción turística externa',
@@ -237,46 +166,17 @@ usuario: Object = {
       'Tratamiento de residuos urbanos',
       'Unidad de ventanilla empresarial',
       'Vías públicas'
-        ];
-      }
+    ];
+  }
 
- capturar() {
-      this.verSeleccion = this.opcionSeleccionada;
-      this.vez += 1;
-      console.log('Vez =' + this.vez);
-          initVizPersonal(this.verSeleccion, this.vez);
-          initVizPresupuesto(this.verSeleccion, this.vez);
-          initVizEjecucion(this.verSeleccion, this.vez);
-      // initViz(this.verSeleccion, 2);
-      // initViz(this.verSeleccion, 2);
+  capturar() {
+    this.verSeleccion = this.opcionSeleccionada;
+    this.vez += 1;
+  console.log('Vez =' + this.vez);
+    initVizPersonal(this.verSeleccion, this.vez);
+    initVizPresupuesto(this.verSeleccion, this.vez);
+    initVizEjecucion(this.verSeleccion, this.vez);
+  }
 
-    }
-
- /*  guardar( forma: NgForm ) {
-
-    console.log('ngForm ', forma );
-    console.log('Valor forma', forma.value  );
-    console.log('Usuario', this.usuario );
-    console.log('Nombre:', forma.controls['nombre'].value);
-    console.log( 'Del Chosen:' + $('#chosen').chosen().find('option:selected' ).text());
-
-    $('#comercial_lista_calc').on('change', function() {
-      let selValue = this.value;
-      let selStatus = (selValue) ? 'Tiene el valor: ' + selValue : 'Está vacío';
-      console.log(selStatus);
-    });
-
-    }
-
-  VerNombre( forma: NgForm ) {
-    console.log('Usuario', this.usuario );
-
-console.log(forma.controls['nombre'].value);
-
-  } */
-
-  ngOnInit() {
-      }
+  ngOnInit() {}
 }
-
-

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 declare var $: any;
 declare var initVizEconomicos;
-// declare var vez;
 
 @Component({
   selector: 'app-economicos',
@@ -10,16 +9,13 @@ declare var initVizEconomicos;
   styleUrls: ['./economicos.component.css']
 })
 export class EconomicosComponent implements OnInit {
-  DesPro = 'Recogida de residuos';
   datos;
 
-opcionSeleccionada: string = '0';
-verSeleccion: string = '';
-vez:number = 0;
+opcionSeleccionada = '0';
+verSeleccion = '';
+vez = 0;
 
   constructor() {
-
-
     this.datos =
     [
       'A Diputaciones',
@@ -264,20 +260,17 @@ vez:number = 0;
       'Urbanizacion de entorno de San Juan de los Caballeros',
       'Urbanizacion de parcela edificio Jefatura de Policia Local',
       'Valoraciones y peritajes'
-      ]
-    
-    ;
+      ];
       }
 
- capturar() {
-      this.verSeleccion = this.opcionSeleccionada;
-      this.vez += 1;
-      console.log('Vez =' + this.vez);
-      initVizEconomicos(this.verSeleccion, this.vez);
-         }
+  capturar() {
+    this.verSeleccion = this.opcionSeleccionada;
+    this.vez += 1;
+    console.log('Vez =' + this.vez);
+    initVizEconomicos(this.verSeleccion, this.vez);
+  }
 
   ngOnInit() {
-  
-  }
+   }
 
 }
