@@ -9,6 +9,10 @@ import { NgSelectModule } from '@ng-select/ng-select';
 // npm install --save @ng-select/ng-select
 
 declare var $: any;
+declare var initVizPersonal;
+declare var initVizPresupuesto;
+declare var initVizEjecucion;
+
 
 
 
@@ -43,11 +47,11 @@ declare var $: any;
 })
 export class ProgramaAniosComponent implements OnInit {
   DesPro = 'Recogida de residuos';
-
   datos;
 
 opcionSeleccionada: string = '0';
 verSeleccion: string = '';
+vez:number = 0;
 
   /*
 usuario: Object = {
@@ -167,7 +171,6 @@ usuario: Object = {
       'Oficina de proyectos',
       'Oficina del defensor de la ciudadanía',
       'Ordenación del tráfico y del estacionamiento',
-      'Ordenación del tráfico y del estacionamiento',
       'Organización de actividades culturales',
       'Otras actuacines relacionadas con medio ambiente. Educación mediambiental',
       'Otras actuaciones de protección de la salubridad pública',
@@ -239,8 +242,14 @@ usuario: Object = {
 
  capturar() {
       this.verSeleccion = this.opcionSeleccionada;
-      initViz(this.verSeleccion, 1);
-      initViz(this.verSeleccion, 2);
+      this.vez += 1;
+      console.log('Vez =' + this.vez);
+          initVizPersonal(this.verSeleccion, this.vez);
+          initVizPresupuesto(this.verSeleccion, this.vez);
+          initVizEjecucion(this.verSeleccion, this.vez);
+      // initViz(this.verSeleccion, 2);
+      // initViz(this.verSeleccion, 2);
+
     }
 
  /*  guardar( forma: NgForm ) {
