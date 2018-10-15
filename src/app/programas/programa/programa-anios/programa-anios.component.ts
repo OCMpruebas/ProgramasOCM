@@ -96,6 +96,7 @@ export class ProgramaAniosComponent implements OnInit {
       'Mejoras nivel educacional estudiantes',
       'Mercados',
       'Montes Propios',
+      'Movilidad urbana',
       'Museo Arqueologico',
       'Oficina de proyectos',
       'Oficina del defensor de la ciudadanía',
@@ -142,7 +143,7 @@ export class ProgramaAniosComponent implements OnInit {
       'Servicio de Recaudación',
       'Servicio de Tesorería',
       'Servicios centrales de Fomento',
-      'Servicios Centrales Gobierno de la Corporación',
+      'Servicios Centrales Gobierno de la Corporación (Organos de Gobierno)',
       'Servicios Comunitarios de asistencia a personas dependientes',
       'Servicios Generales Administración Central',
       'Servicios Generales Area de la Presidencia',
@@ -176,6 +177,7 @@ export class ProgramaAniosComponent implements OnInit {
     initVizPersonal(this.verSeleccion, this.vez);
     initVizPresupuesto(this.verSeleccion, this.vez);
     initVizEjecucion(this.verSeleccion, this.vez);
+
   }
 
   ngOnInit() {}

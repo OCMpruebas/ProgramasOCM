@@ -51,11 +51,12 @@
     function initVizPersonal(DesPro, vez) {
       if (vez > 1) {
         console.log('initVizPersonal' + ' SegundaVez =' + vez)
-        viz.dispose();
-        location.reload();
+        viz2.dispose();
+        //location.reload();
         } else {
         console.log('initVizPersonal' + ' PrimeraVez =' + vez)
       }
+      
       var containerDivPersonal = document.getElementById("vizContainerPersonal"),
       // var containerDiv = document.getElementById("vizContainer"),
         urlPersonal = "https://public.tableau.com/views/Anexo1_Presupuesto2_018/PersonalparaWEB?:embed=y&:display_count=yes",
@@ -67,13 +68,13 @@
           hideTabs: true,
           showShareOptions: true
         };
-      viz = new tableau.Viz(containerDivPersonal, urlPersonal, options);
+      viz2 = new tableau.Viz(containerDivPersonal, urlPersonal, options);
     }
 
     function initVizPresupuesto(DesPro, vez) {
       if (vez > 1) {
         console.log('initVizPresupuesto')
-        viz.dispose();
+        viz3.dispose();
       }
       var containerDivGastos1 = document.getElementById("vizContainerGastos1"),
       // var containerDivGastos1 = document.getElementById("vizContainer"),
@@ -82,7 +83,7 @@
           "Des Fun": DesPro,
           hideTabs: true
         };
-      viz = new tableau.Viz(containerDivGastos1, urlGastos1, options1);
+      viz3 = new tableau.Viz(containerDivGastos1, urlGastos1, options1);
     }
 
     function initVizEjecucion(DesPro, vez) {

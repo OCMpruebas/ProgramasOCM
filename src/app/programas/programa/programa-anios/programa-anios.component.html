@@ -2,13 +2,14 @@
 </head>
 
 <body>
+  <div class="container-fluid">
   <div class="item-inside__meta">
     <br>
     <br>
     <p class="ae-theta rk-portfolio-category ">Selecciona el programa del que quieres obtener infomación:</p>
   </div>
 
-  <div class="container-fluid">
+  
     <select [(ngModel)]="opcionSeleccionada" (change)="capturar()">
       <option value="0">Pulsa aqui para seleccionar un programa.</option>
       <option *ngFor="let dato of datos">
