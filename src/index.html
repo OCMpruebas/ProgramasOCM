@@ -33,8 +33,7 @@
   <app-root></app-root>
 
   <script type='text/javascript'>
-
-    function initVizEconomicos(DesEco, vez) {
+     function initVizEconomicos(DesEco, vez) {
       if (vez > 1) {
         viz.dispose();
        }
@@ -58,7 +57,6 @@
       }
       
       var containerDivPersonal = document.getElementById("vizContainerPersonal"),
-      // var containerDiv = document.getElementById("vizContainer"),
         urlPersonal = "https://public.tableau.com/views/Anexo1_Presupuesto2_018/PersonalparaWEB?:embed=y&:display_count=yes",
         options = {
           "DesPro": DesPro,
@@ -77,7 +75,6 @@
         viz3.dispose();
       }
       var containerDivGastos1 = document.getElementById("vizContainerGastos1"),
-      // var containerDivGastos1 = document.getElementById("vizContainer"),
         urlGastos1 = "https://public.tableau.com/views/2018_03_21PresupuestoGastos2018DEFINITIVOMAM_0/Porprogramaycapitulo",
         options1 = {
           "Des Fun": DesPro,
@@ -92,7 +89,6 @@
         viz.dispose();
       }
       var containerDivGastos = document.getElementById("vizContainerGastos"),
-      // var containerDivGastos = document.getElementById("vizContainer"),
         urlGastos = "https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Hoja2?:embed=y&:display_count=yes&publish=yes",
         options = {
           "Des Pro": DesPro,
@@ -120,5 +116,4 @@
           integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
           crossorigin="anonymous"></script>
 </body>
-
 </html>

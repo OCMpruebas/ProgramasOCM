@@ -28,8 +28,8 @@ export class ProgramaAniosComponent implements OnInit {
     this.datos = [
       'Actividades y promoción turística',
       'Actividades y promoción turística externa',
-      'Administración general de la seguridad y protección civil',
-      'Administración General del Area Económica',
+      'Administración General de la seguridad y protección civil',
+      'Administración General del area económica',
       'Administración medio rural',
       'Albergue Municipal (Plan Estrategico Servicios Sociales)',
       'Alcazar-Conjunto Monumental',
@@ -39,7 +39,7 @@ export class ProgramaAniosComponent implements OnInit {
       'Asesoría Jurídica General',
       'Atención a la ciudadanía y modernización administrativa',
       'Ayuda a grupos políticos',
-      'Banda de mMusica',
+      'Banda de música',
       'Bibliotecas',
       'Caminos rurales',
       'Casa de la Juventud',
@@ -62,7 +62,7 @@ export class ProgramaAniosComponent implements OnInit {
       'Distrito Noroeste',
       'Distrito Norte',
       'Distrito Oeste',
-      'Distrito rural',
+      'Distrito Rural',
       'Distrito Sur',
       'Edificaciones',
       'Escuela de musica',
@@ -80,10 +80,10 @@ export class ProgramaAniosComponent implements OnInit {
       'Gestión administrativa impulso económico',
       'Gestión del patrimonio',
       'Grupos políticos',
-      'Igualdad y Salud (Plan Estrategico Servicios Sociales)',
+      'Igualdad y salud (Plan Estrategico Servicios Sociales)',
       'Imagen y diseño',
       'Imprevistos y funciones no clasificadas',
-      'Inclusion social y Solidaridad (Plan Estrategico Servicios Sociales)',
+      'Inclusion social y solidaridad (Plan Estrategico Servicios Sociales)',
       'Iniciativa Urbana Jerez Sur',
       'Inmigracion (Plan Estrategico Servicios Sociales)',
       'Instalaciones y pistas deportivas',
@@ -97,38 +97,38 @@ export class ProgramaAniosComponent implements OnInit {
       'Mercados',
       'Montes Propios',
       'Movilidad urbana',
-      'Museo Arqueologico',
+      'Museo arqueologico',
       'Oficina de proyectos',
       'Oficina del defensor de la ciudadanía',
       'Ordenación del tráfico y del estacionamiento',
       'Organización de actividades culturales',
-      'Otras actuacines relacionadas con medio ambiente. Educación mediambiental',
+      'Otras actuaciones relacionadas con medio ambiente. Educación mediambiental',
       'Otras actuaciones de protección de la salubridad pública',
       'Otras actuaciones relacionadas con medio ambiente. Prevención y calidad',
       'Otras prestaciones económicas a favor de empleados',
       'Otros mantenimientos',
-      'Parque Móvil',
+      'Parque móvil',
       'Parque zoológico',
       'Participación ciudadana',
       'Piscinas municipales',
-      'Plan contra la Exclusion Social',
+      'Plan contra la exclusion social',
       'Plan promocion empleo',
-      'Planeamiento y Gestión Urbanística',
+      'Planeamiento y gestión urbanística',
       'Planes especiales',
-      'Planes Municipale de Ordenación Urbana',
+      'Planes Municipales de Ordenación Urbana',
       'Policía Local',
       'Politicas activas de empleo',
       'Prestaciones complementarias (Plan Estrategico Servicios Sociales)',
       'Presupuestos participativos',
       'Prevención de riesgos laborales',
-      'Prevencion',
+      'Prevención',
       'Primera atención (Plan Estrategico Servicios Sociales)',
       'Promoción cultural',
       'Promoción cultural juventud',
       'Promoción cultural. Comunicación y publicaciones',
-      'Promocion de emprendedores',
+      'Promoción de emprendedores',
       'Promoción turística Ciudad del Vino 2014',
-      'Promocion y fomento del deporte',
+      'Promoción y fomento del deporte',
       'Promoción y gestión de vivienda de protección pública',
       'Protección de la salubridad pública. Profilaxis vectoriales',
       'Protección y mejora del medio ambiente',
@@ -136,27 +136,27 @@ export class ProgramaAniosComponent implements OnInit {
       'Secretaría General',
       'Secretaría-Intervención ELA',
       'Servicio de atencion socioeducativa infancia y adolescencia',
-      'Servicio de consumo',
+      'Servicio de Consumo',
       'Servicio de Intervención',
-      'Servicio de mayordomía',
-      'Servicio de radio y TV municipal',
+      'Servicio de Mayordomía',
+      'Servicio de Radio y TV municipal',
       'Servicio de Recaudación',
       'Servicio de Tesorería',
-      'Servicios centrales de Fomento',
+      'Servicios Centrales de Fomento',
       'Servicios Centrales Gobierno de la Corporación (Organos de Gobierno)',
       'Servicios Comunitarios de asistencia a personas dependientes',
       'Servicios Generales Administración Central',
       'Servicios Generales Area de la Presidencia',
       'Servicios Generales de Administración de Personal',
-      'Servicios generales de Bienestar Social',
+      'Servicios Generales de Bienestar Social',
       'Servicios Generales de Cultura',
       'Servicios Generales de Deportes',
-      'Servicios generales de Educación',
-      'Servicios generales de Infraestructura',
+      'Servicios Generales de Educación',
+      'Servicios Generales de Infraestructura',
       'Servicios Generales de Protección Civil',
       'Servicios Generales de Urbanismo',
       'Servicios Gestión Tributaria e Inspección Fiscal',
-      'Servicios Informáticos Internos',
+      'Servicios informáticos internos',
       'Sociedad de la información',
       'Tranferencias a Mancomunidad Bahía de Cádiz',
       'Transferencias a Consorcios',
@@ -171,14 +171,37 @@ export class ProgramaAniosComponent implements OnInit {
   }
 
   capturar() {
+    console.log('LLega');
     this.verSeleccion = this.opcionSeleccionada;
     this.vez += 1;
-
     initVizPersonal(this.verSeleccion, this.vez);
     initVizPresupuesto(this.verSeleccion, this.vez);
     initVizEjecucion(this.verSeleccion, this.vez);
-
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    $(function () {
+      // 'use strict';
+      console.log('Activa Chosen');
+       const configChosen = {
+         '.chosen-select'           : {},
+      //   '.chosen-select-deselect'  : {allow_single_deselect: true},
+      //   '.chosen-select-no-single' : {disable_search_threshold: 10},
+      //   '.chosen-select-no-results': {no_results_text: 'Nothing Found'},
+      //   '.chosen-select-width'     : {width: '50%'}
+      };
+      for (let selector in configChosen) {
+        $(selector).chosen(configChosen[selector]);
+      }
+    });
+
+    let vez = 0;
+    $('#chosen1').change(function() {
+      // console.log($(this).val(), this);
+      vez += 1;
+      initVizPersonal($(this).val(), vez);
+      initVizPresupuesto($(this).val(), vez);
+      initVizEjecucion($(this).val(), vez);
+      });
+    }
 }

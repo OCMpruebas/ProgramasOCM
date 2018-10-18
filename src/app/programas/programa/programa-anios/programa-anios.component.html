@@ -8,17 +8,27 @@
     <br>
     <p class="ae-theta rk-portfolio-category ">Selecciona el programa del que quieres obtener infomación:</p>
   </div>
-
   
-    <select [(ngModel)]="opcionSeleccionada" (change)="capturar()">
+    <!-- <select [(ngModel)]="opcionSeleccionada" (change)="capturar()">
       <option value="0">Pulsa aqui para seleccionar un programa.</option>
       <option *ngFor="let dato of datos">
         {{dato}}
       </option>
     </select>
     <br>
-    <br>
-
+    <br> -->
+   
+      <div class="form-group">
+        <!-- <label for="ticket_type">Standard Select</label> -->
+        <!-- <select data-placeholder="Choose a Country..." class="form-control chosen-select" id="select1" > -->
+        <select class="form-control chosen-select" id="chosen1" >
+          <option value="0">Pulsa para seleccionar un programa.</option>
+          <option *ngFor="let dato of datos">
+            {{dato}}
+          </option>
+        </select>
+      </div>
+    
     <table class=" aligncenter" style="width: 800px; border:double;">
       <tbody>
         <tr>
