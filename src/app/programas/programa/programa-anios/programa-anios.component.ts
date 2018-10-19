@@ -20,9 +20,9 @@ declare var initVizEjecucion;
 })
 export class ProgramaAniosComponent implements OnInit {
   datos;
-  opcionSeleccionada = '0';
-  verSeleccion = '';
-  vez = 0;
+  // opcionSeleccionada = '0';
+  // verSeleccion = '';
+  // vez = 0;
 
   constructor() {
     this.datos = [
@@ -170,38 +170,38 @@ export class ProgramaAniosComponent implements OnInit {
     ];
   }
 
-  capturar() {
-    console.log('LLega');
-    this.verSeleccion = this.opcionSeleccionada;
-    this.vez += 1;
-    initVizPersonal(this.verSeleccion, this.vez);
-    initVizPresupuesto(this.verSeleccion, this.vez);
-    initVizEjecucion(this.verSeleccion, this.vez);
-  }
+  // capturar() {
+  //   console.log('LLega');
+  //   this.verSeleccion = this.opcionSeleccionada;
+  //   this.vez += 1;
+  //   initVizPersonal(this.verSeleccion, this.vez);
+  //   initVizPresupuesto(this.verSeleccion, this.vez);
+  //   initVizEjecucion(this.verSeleccion, this.vez);
+  // }
 
   ngOnInit() {
+
     $(function () {
       // 'use strict';
-      console.log('Activa Chosen');
-       const configChosen = {
-         '.chosen-select'           : {},
-      //   '.chosen-select-deselect'  : {allow_single_deselect: true},
-      //   '.chosen-select-no-single' : {disable_search_threshold: 10},
-      //   '.chosen-select-no-results': {no_results_text: 'Nothing Found'},
-      //   '.chosen-select-width'     : {width: '50%'}
+      // console.log('Activa Chosen');
+      const configChosen = {
+        '.chosen-select': {},
       };
-      for (let selector in configChosen) {
-        $(selector).chosen(configChosen[selector]);
-      }
+
+      $('.chosen-select').chosen({
+        disable_search_threshold: 10,
+        no_results_text: 'No encuentro ',
+        width: '65%'
+      });
+
     });
 
     let vez = 0;
-    $('#chosen1').change(function() {
-      // console.log($(this).val(), this);
+    $('#chosen1').change(function () {
       vez += 1;
       initVizPersonal($(this).val(), vez);
       initVizPresupuesto($(this).val(), vez);
       initVizEjecucion($(this).val(), vez);
-      });
-    }
+    });
+  }
 }
