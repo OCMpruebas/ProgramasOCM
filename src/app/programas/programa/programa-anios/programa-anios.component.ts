@@ -79,7 +79,7 @@ export class ProgramaAniosComponent implements OnInit {
       'Fiestas populares y festejos Medio Rural',
       'Flamenco',
       'Fondo de Contingencia de Ejecución Presupuestaria',
-      'Fondo estatatal para el empleo y sostenibilidad local.',
+      'Fondo estatal para el empleo y sostenibilidad local.',
       'Formación interna',
       'Formacion y proyectos',
       'Funcionamiento de centros docentes de enseñanza preescolar y ',

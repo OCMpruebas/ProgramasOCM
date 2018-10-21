@@ -33,19 +33,19 @@
   <app-root></app-root>
 
   <script type='text/javascript'>
-     function initVizEconomicos(DesEco, vez) {
+      function initVizEconomicos(DesEco, vez) {
       if (vez > 1) {
         viz.dispose();
        }
-      var containerDiv = document.getElementById("vizContainerPersonal"),
-      // urlPersonal = "https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAMeconomicoPorPrograma/Economicoporprogramas?:embed=y&:display_count=yes&publish=yes",
-      urlPersonal = "https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Economicoporprogramas?:embed=y&:display_count=yes&publish=yes",
+      var containerDiv = document.getElementById("vizContainerEconomicos"),
+      // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018\Ejecucion\2018.10.01
+      urlEconomicos = "https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Economicoporprogramas?:embed=y&:display_count=yes&publish=yes",
         options = {
           "DesEco": DesEco,
           hideTabs: true,
           showShareOptions: true
         };
-      viz = new tableau.Viz(containerDiv, urlPersonal, options);
+      viz = new tableau.Viz(containerDiv, urlEconomicos, options);
     }
 
     function initVizPersonal(DesPro, vez) {
@@ -58,6 +58,7 @@
       }
       
       var containerDivPersonal = document.getElementById("vizContainerPersonal"),
+      // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018\2018.03.23 PdT\Extraidas 19 anexo 1
         urlPersonal = "https://public.tableau.com/views/Anexo1_Presupuesto2_018/PersonalparaWEB?:embed=y&:display_count=yes",
         options = {
           "DesPro": DesPro,
@@ -72,10 +73,10 @@
 
     function initVizPresupuesto(DesPro, vez) {
       if (vez > 1) {
-        // console.log('initVizPresupuesto')
         viz3.dispose();
       }
       var containerDivGastos1 = document.getElementById("vizContainerGastos1"),
+      // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018
         urlGastos1 = "https://public.tableau.com/views/2018_03_21PresupuestoGastos2018DEFINITIVOMAM_0/Porprogramaycapitulo",
         options1 = {
           "Des Fun": DesPro,
@@ -86,10 +87,10 @@
 
     function initVizEjecucion(DesPro, vez) {
       if (vez > 1) {
-        // console.log('initVizEjecucion')
         viz.dispose();
       }
       var containerDivGastos = document.getElementById("vizContainerGastos"),
+        // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018\Ejecucion\2018.10.01
         urlGastos = "https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Hoja2?:embed=y&:display_count=yes&publish=yes",
         options = {
           "Des Pro": DesPro,
