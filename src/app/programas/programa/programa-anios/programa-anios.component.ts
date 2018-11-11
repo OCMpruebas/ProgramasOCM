@@ -20,9 +20,6 @@ declare var initVizEjecucion;
 })
 export class ProgramaAniosComponent implements OnInit {
   datos;
-  // opcionSeleccionada = '0';
-  // verSeleccion = '';
-  // vez = 0;
 
   constructor() {
     this.datos = [
@@ -190,28 +187,17 @@ export class ProgramaAniosComponent implements OnInit {
     ];
   }
 
-  // capturar() {
-  //   console.log('LLega');
-  //   this.verSeleccion = this.opcionSeleccionada;
-  //   this.vez += 1;
-  //   initVizPersonal(this.verSeleccion, this.vez);
-  //   initVizPresupuesto(this.verSeleccion, this.vez);
-  //   initVizEjecucion(this.verSeleccion, this.vez);
-  // }
-
   ngOnInit() {
 
     $(function () {
-      // 'use strict';
-      // console.log('Activa Chosen');
-      const configChosen = {
+       const configChosen = {
         '.chosen-select': {},
       };
 
       $('.chosen-select').chosen({
         disable_search_threshold: 10,
-        no_results_text: 'No encuentro ',
-        width: '65%'
+        no_results_text: 'No encuentro '
+        // width: '65%'
       });
 
     });

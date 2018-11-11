@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 declare var $: any;
+// declare var viz;
+// declare var tableau;
 declare var initVizEconomicos;
 
 @Component({
@@ -9,10 +11,7 @@ declare var initVizEconomicos;
   styleUrls: ['./economicos.component.css']
 })
 export class EconomicosComponent implements OnInit {
-  datos;
-
-opcionSeleccionada = '0';
-verSeleccion = '';
+datos;
 vez = 0;
 
   constructor() {
@@ -360,26 +359,17 @@ vez = 0;
     ;
       }
 
-  // capturar() {
-  //   this.verSeleccion = this.opcionSeleccionada;
-  //   this.vez += 1;
-  //   console.log('Vez =' + this.vez);
-  //   initVizEconomicos(this.verSeleccion, this.vez);
-  // }
-
-  ngOnInit() {
+   ngOnInit() {
     $(function () {
-      // 'use strict';
-      // console.log('Activa Chosen');
-      const configChosen = {
+        const configChosen = {
         '.chosen-select': {},
       };
 
       $('.chosen-select').chosen({
         disable_search_threshold: 10,
         no_results_text: 'No encuentro ',
-        width: '65%'
-      });
+        // width: '65%',
+       });
 
     });
 
@@ -389,5 +379,19 @@ vez = 0;
       initVizEconomicos($(this).val(), vez);
          });
    }
-
 }
+
+// function initVizEconomicos(DesEco, vez) {
+//     if (vez > 1) {
+//       viz.dispose();
+//     }
+//     const containerDiv = document.getElementById('vizContainerEconomicos'),
+//       // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018\Ejecucion\2018.10.01
+//       urlEconomicos = 'https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Economicoporprogramas?:embed=y&:display_count=yes&publish=yes',
+//       options = {
+//         'DesEco': DesEco,
+//         hideTabs: true,
+//         showShareOptions: true
+//       };
+//     viz = new tableau.Viz(containerDiv, urlEconomicos, options);
+//   }

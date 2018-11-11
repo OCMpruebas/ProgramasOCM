@@ -1,42 +1,34 @@
-<head>
-</head>
-
 <body>
-  <div class="container-fluid">
-    <div class="item-inside__meta">
-      <br>
-      <br>
-      <p class="ae-theta rk-portfolio-category ">Selecciona el económico del que quieres obtener infomación:</p>
+  <div class="container">
+    <div class="row justify-content-center">
+      <h2>Selecciona el económico del que quieres obtener infomación:</h2>
     </div>
 
-    <!-- <select [(ngModel)]="opcionSeleccionada" (change)="capturar()">
-      <option value="0">Pulsa aqui para seleccionar un económico.</option>
-      <option *ngFor="let dato of datos">
-        {{dato}}
-      </option>
-    </select>
-    <br>
-    <br> -->
+    <div class="row justify-content-center">
+      <select style="width: 450px;" class="chosen-select" id="chosen1">
+        <option value="0">Pulsa para seleccionar un programa.</option>
+        <option *ngFor="let dato of datos"> {{ dato }} </option>
+      </select>
+    </div>
 
-    <div class="form-group">
-        <!-- <label for="ticket_type">Standard Select</label> -->
-        <!-- <select data-placeholder="Choose a Country..." class="form-control chosen-select" id="select1" > -->
-        <select class="form-control chosen-select" id="chosen1" >
-          <option value="0">Pulsa para seleccionar un programa.</option>
-          <option *ngFor="let dato of datos">
-            {{dato}}
-          </option>
-        </select>
-      </div>
+    <div class="row justify-content-center" id="vizContainerEconomicos"></div>
 
-    <table class=" aligncenter" style="width: 800px; border:double;">
+
+    <!-- <table
+      class=" aligncenter"
+      style="width: 800px; margin: auto; border:double;"
+    >
       <tbody>
         <tr>
-          <td style="width: 300px; border:double;">
-            <div id="vizContainerEconomicos"></div>
+          <td style="width: 300px; margin: auto; border:double;">
+            <div style="margin: auto;" id="vizContainerEconomicos"></div>
           </td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
+
+
+
+
   </div>
 </body>

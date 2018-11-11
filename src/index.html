@@ -33,43 +33,39 @@
   <app-root></app-root>
 
   <script type='text/javascript'>
-      function initVizEconomicos(DesEco, vez) {
-      if (vez > 1) {
-        viz.dispose();
-       }
-      var containerDiv = document.getElementById("vizContainerEconomicos"),
+function initVizEconomicos(DesEco, vez) {
+    if (vez > 1) {
+      viz.dispose();
+    }
+    var containerDiv = document.getElementById('vizContainerEconomicos'),
       // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018\Ejecucion\2018.10.01
-      urlEconomicos = "https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Economicoporprogramas?:embed=y&:display_count=yes&publish=yes",
-        options = {
-          "DesEco": DesEco,
-          hideTabs: true,
-          showShareOptions: true
-        };
-      viz = new tableau.Viz(containerDiv, urlEconomicos, options);
-    }
+      // urlEconomicos = 'https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Economicoporprogramas?:embed=y&:display_count=yes&publish=yes',
+      urlEconomicos = 'https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Economicoporprogramas',
+      options = {
+        'DesEco': DesEco,
+        hideTabs: true,
+        showShareOptions: true
+      };
+    viz = new tableau.Viz(containerDiv, urlEconomicos, options);
+  }
 
-    function initVizPersonal(DesPro, vez) {
-      if (vez > 1) {
-        // console.log('initVizPersonal' + ' SegundaVez =' + vez)
-        viz2.dispose();
-        //location.reload();
-        } else {
-        // console.log('initVizPersonal' + ' PrimeraVez =' + vez)
+     function initVizPersonal(DesPro, vez) {
+        if (vez > 1) {
+          viz2.dispose();
+        } 
+        var containerDivPersonal = document.getElementById("vizContainerPersonal"),
+          // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018\2018.03.23 PdT\Extraidas 19 anexo 1
+          urlPersonal = "https://public.tableau.com/views/Anexo1_Presupuesto2_018/PersonalparaWEB?:embed=y&:display_count=yes",
+          options = {
+            "DesPro": DesPro,
+            // width: 550,
+            // height: 640,
+            // height: (containerDiv.offsetWidth) *1 ,
+            hideTabs: true,
+            showShareOptions: true
+          };
+        viz2 = new tableau.Viz(containerDivPersonal, urlPersonal, options);
       }
-      
-      var containerDivPersonal = document.getElementById("vizContainerPersonal"),
-      // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018\2018.03.23 PdT\Extraidas 19 anexo 1
-        urlPersonal = "https://public.tableau.com/views/Anexo1_Presupuesto2_018/PersonalparaWEB?:embed=y&:display_count=yes",
-        options = {
-          "DesPro": DesPro,
-          // width: 550,
-          // height: 640,
-          // height: (containerDiv.offsetWidth) *1 ,
-          hideTabs: true,
-          showShareOptions: true
-        };
-      viz2 = new tableau.Viz(containerDivPersonal, urlPersonal, options);
-    }
 
     function initVizPresupuesto(DesPro, vez) {
       if (vez > 1) {

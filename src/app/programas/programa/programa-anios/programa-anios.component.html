@@ -1,53 +1,40 @@
-<head>
-</head>
-
 <body>
   <div class="container-fluid">
-  <div class="item-inside__meta">
-    <br>
-    <br>
-    <p class="ae-theta rk-portfolio-category ">Selecciona el programa del que quieres obtener infomación:</p>
-  </div>
-  
-    <!-- <select [(ngModel)]="opcionSeleccionada" (change)="capturar()">
-      <option value="0">Pulsa aqui para seleccionar un programa.</option>
-      <option *ngFor="let dato of datos">
-        {{dato}}
-      </option>
-    </select>
-    <br>
-    <br> -->
-   
-      <div class="form-group">
-        <!-- <label for="ticket_type">Standard Select</label> -->
-        <!-- <select data-placeholder="Choose a Country..." class="form-control chosen-select" id="select1" > -->
-        <select class="form-control chosen-select" id="chosen1" >
-          <option value="0">Pulsa para seleccionar un programa.</option>
-          <option *ngFor="let dato of datos">
-            {{dato}}
-          </option>
-        </select>
-      </div>
-    
-    <table class=" aligncenter" style="width: 800px; border:double;">
+      <div class="row justify-content-center">
+        <h2>Selecciona el programa del que quieres obtener infomación:</h2>
+    </div>
+
+    <div class="row justify-content-center">
+      <select style="width: 450px;" class="chosen-select" id="chosen1">
+      <option value="0">Pulsa para seleccionar un programa.</option>
+        <option *ngFor="let dato of datos"> {{ dato }} </option>
+      </select>
+    </div>
+
+
+    <div class="row justify-content-center" id="vizContainerPersonal"></div>
+    <div class="row justify-content-center" id="vizContainerGastos1"></div>
+    <div class="row justify-content-center" id="vizContainerGastos"></div>
+
+    <!-- <table class=" aligncenter" style="width: 800px; margin: auto; border:double;">
       <tbody>
         <tr>
-          <td style="width: 300px; border:double;">
+          <td style="width: 300px; margin: auto; border:double;">
             <div id="vizContainerPersonal"></div>
           </td>
         </tr>
         <tr>
-          <td style="width: 400px; border: double;">
+          <td style="width: 400px; margin: auto; border: double;">
             <div id="vizContainerGastos1"></div>
           </td>
         </tr>
         <tr>
-          <td style="width: 400px; border: double;">
-            <div id="vizContainerGastos">
-            </div>
+          <td style="width: 400px; margin: auto; border: double;">
+            <div id="vizContainerGastos"></div>
           </td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
+
   </div>
 </body>
