@@ -39,7 +39,6 @@ function initVizEconomicos(DesEco, vez) {
     }
     var containerDiv = document.getElementById('vizContainerEconomicos'),
       // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018\Ejecucion\2018.10.01
-      // urlEconomicos = 'https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Economicoporprogramas?:embed=y&:display_count=yes&publish=yes',
       urlEconomicos = 'https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Economicoporprogramas',
       options = {
         'DesEco': DesEco,
@@ -55,7 +54,7 @@ function initVizEconomicos(DesEco, vez) {
         } 
         var containerDivPersonal = document.getElementById("vizContainerPersonal"),
           // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018\2018.03.23 PdT\Extraidas 19 anexo 1
-          urlPersonal = "https://public.tableau.com/views/Anexo1_Presupuesto2_018/PersonalparaWEB?:embed=y&:display_count=yes",
+          urlPersonal = "https://public.tableau.com/views/Anexo1_Presupuesto2_018/PersonalparaWEB",
           options = {
             "DesPro": DesPro,
             // width: 550,
@@ -87,7 +86,7 @@ function initVizEconomicos(DesEco, vez) {
       }
       var containerDivGastos = document.getElementById("vizContainerGastos"),
         // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018\Ejecucion\2018.10.01
-        urlGastos = "https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Hoja2?:embed=y&:display_count=yes&publish=yes",
+        urlGastos = "https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Hoja2",
         options = {
           "Des Pro": DesPro,
           hideTabs: true
@@ -101,7 +100,7 @@ function initVizEconomicos(DesEco, vez) {
     crossorigin="anonymous"></script>
 
   <!-- Librerias de pluggins -->
-   <!-- <script src="assets\js\chosen\chosen.jquery.min.js"></script> -->
+     <!-- <script src="assets\js\chosen\chosen.jquery.min.js"></script> -->
   <script src="https://harvesthq.github.io/chosen/chosen.jquery.js"></script>
   <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
   <script src="assets/js/svg4everybody.min.js"></script>
