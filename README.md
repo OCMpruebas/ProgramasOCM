@@ -9,4 +9,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Subir a Github
 git remote add origin https://github.com/OCMpruebas/ProgramasOCM.git
+
 git push -u origin master
