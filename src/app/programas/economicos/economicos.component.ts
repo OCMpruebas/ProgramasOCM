@@ -4,7 +4,7 @@ declare var $: any;
 // Si uso declare var viz  da error porque no esta declarada como global
 let viz;
 declare var tableau;
-// declare var initVizEconomicos;
+
 
 @Component({
   selector: 'app-economicos',
@@ -374,27 +374,12 @@ vez = 0;
 
     });
 
-    // let vez = 0;
-    // $('#chosen1').change(function () {
-    //   vez += 1;
-    //   initVizEconomicos($(this).val(), vez);
-    //      });
-
-
      $('#chosen1').change(function () {
-      //  console.log($(this).val());
-      //  prueba($(this).val());
-      initNewVizEconomicos($(this).val());
-    });
-
-
-
-// function prueba (valor) {
-// console.log ('Hola ' + valor );
-// }
+       initVizEconomicos($(this).val());
+     });
 
 let vez = 0;
-function initNewVizEconomicos(DesEco) {
+function initVizEconomicos(DesEco) {
   vez += 1;
   if (vez > 1) {
     viz.dispose();

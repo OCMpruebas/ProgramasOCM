@@ -9,9 +9,11 @@ import { NgSelectModule } from '@ng-select/ng-select';
 // npm install --save @ng-select/ng-select
 
 declare var $: any;
-declare var initVizPersonal;
-declare var initVizPresupuesto;
-declare var initVizEjecucion;
+
+let viz;
+let viz2;
+let viz3;
+declare var tableau;
 
 @Component({
   selector: 'app-programa-anios',
@@ -202,12 +204,60 @@ export class ProgramaAniosComponent implements OnInit {
 
     });
 
-    let vez = 0;
-    $('#chosen1').change(function () {
-      vez += 1;
-      initVizPersonal($(this).val(), vez);
-      initVizPresupuesto($(this).val(), vez);
-      initVizEjecucion($(this).val(), vez);
+     $('#chosen1').change(function () {
+      initVizPersonal($(this).val());
+      initVizPresupuesto($(this).val());
+      initVizEjecucion($(this).val());
     });
+
+    let vez = 0;
+    function initVizPersonal(DesPro) {
+      vez += 1;
+      if (vez > 1) {
+            viz2.dispose();
+          }
+          const containerDivPersonal = document.getElementById('vizContainerPersonal'),
+            // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018\2018.03.23 PdT\Extraidas 19 anexo 1
+            urlPersonal = 'https://public.tableau.com/views/Anexo1_Presupuesto2_018/PersonalparaWEB',
+            options = {
+              'DesPro': DesPro,
+              // width: 550,
+              // height: 640,
+              // height: (containerDiv.offsetWidth) *1 ,
+              hideTabs: true,
+              showShareOptions: true
+            };
+          viz2 = new tableau.Viz(containerDivPersonal, urlPersonal, options);
+        }
+
+      function initVizPresupuesto(DesPro) {
+        // vez += 1;
+        if (vez > 1) {
+          viz3.dispose();
+        }
+        const containerDivGastos1 = document.getElementById('vizContainerGastos1'),
+        // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018
+          urlGastos1 = 'https://public.tableau.com/views/2018_03_21PresupuestoGastos2018DEFINITIVOMAM_0/Porprogramaycapitulo',
+          options1 = {
+            'Des Fun': DesPro,
+            hideTabs: true
+          };
+        viz3 = new tableau.Viz(containerDivGastos1, urlGastos1, options1);
+      }
+
+      function initVizEjecucion(DesPro) {
+        // vez += 1;
+        if (vez > 1) {
+          viz.dispose();
+        }
+        const containerDivGastos = document.getElementById('vizContainerGastos'),
+          // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018\Ejecucion\2018.10.01
+          urlGastos = 'https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Hoja2',
+          options = {
+            'Des Pro': DesPro,
+            hideTabs: true
+          };
+        viz = new tableau.Viz(containerDivGastos, urlGastos, options);
+      }
   }
 }
