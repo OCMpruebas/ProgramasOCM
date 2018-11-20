@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 declare var $: any;
-// declare var viz;
-// declare var tableau;
-declare var initVizEconomicos;
+// Si uso declare var viz  da error porque no esta declarada como global
+let viz;
+declare var tableau;
+// declare var initVizEconomicos;
 
 @Component({
   selector: 'app-economicos',
@@ -373,25 +374,40 @@ vez = 0;
 
     });
 
-    let vez = 0;
-    $('#chosen1').change(function () {
-      vez += 1;
-      initVizEconomicos($(this).val(), vez);
-         });
-   }
-}
+    // let vez = 0;
+    // $('#chosen1').change(function () {
+    //   vez += 1;
+    //   initVizEconomicos($(this).val(), vez);
+    //      });
 
-// function initVizEconomicos(DesEco, vez) {
-//     if (vez > 1) {
-//       viz.dispose();
-//     }
-//     const containerDiv = document.getElementById('vizContainerEconomicos'),
-//       // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018\Ejecucion\2018.10.01
-//       urlEconomicos = 'https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Economicoporprogramas?:embed=y&:display_count=yes&publish=yes',
-//       options = {
-//         'DesEco': DesEco,
-//         hideTabs: true,
-//         showShareOptions: true
-//       };
-//     viz = new tableau.Viz(containerDiv, urlEconomicos, options);
-//   }
+
+     $('#chosen1').change(function () {
+      //  console.log($(this).val());
+      //  prueba($(this).val());
+      initNewVizEconomicos($(this).val());
+    });
+
+
+
+// function prueba (valor) {
+// console.log ('Hola ' + valor );
+// }
+
+let vez = 0;
+function initNewVizEconomicos(DesEco) {
+  vez += 1;
+  if (vez > 1) {
+    viz.dispose();
+  }
+  const containerDiv = document.getElementById('vizContainerEconomicos'),
+    // C:\Users\pc\Google Drive\Ayuntamiento\Presupuestos\2.018\Ejecucion\2018.10.01
+    urlEconomicos = 'https://public.tableau.com/views/1EstadoEjecucin2018Gastosporaplicaciones1-10-2018MAM/Economicoporprogramas',
+    options = {
+      'DesEco': DesEco,
+      hideTabs: true,
+      showShareOptions: true
+    };
+      viz = new tableau.Viz(containerDiv, urlEconomicos, options);
+    }
+  }
+}
